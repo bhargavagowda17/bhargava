@@ -1,0 +1,14 @@
+# Show branches
+git branch
+
+# Switch to main
+git switch main
+
+# Delete a merged local branch
+git branch -d feature-login
+
+# Force delete a local branch
+git branch -D feature-login
+
+# Delete a remote branch on GitHub
+git push origin --delete feature-login
