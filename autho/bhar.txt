@@ -1,0 +1,30 @@
+## **Difference Between Session Cookies and Token-Based Authentication (8 Marks)**
+
+| **Session Cookies**                                                | **Token-Based Authentication**                                   |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| Uses a **session ID** stored in a cookie.                          | Uses a **token** (e.g., JWT) for authentication.                 |
+| Server stores session information.                                 | Server is **stateless**; it does not store session data.         |
+| Session ID is automatically sent by the browser with each request. | Token is sent in the **Authorization** header (`Bearer Token`).  |
+| Suitable for traditional web applications.                         | Suitable for REST APIs, mobile apps, and cloud applications.     |
+| Less scalable because the server maintains sessions.               | Highly scalable since no server-side session storage is needed.  |
+| More vulnerable to session hijacking if cookies are stolen.        | More secure when tokens are encrypted and have expiry times.     |
+| Session ends when it expires or the user logs out.                 | Token expires based on its validity period and can be refreshed. |
+| Easier to implement for small web applications.                    | Better for distributed and microservices architectures.          |
+
+### **Advantages of Session Cookies**
+
+* Easy to implement.
+* Automatic cookie handling by browsers.
+* Good for traditional web applications.
+
+### **Advantages of Token-Based Authentication**
+
+* Stateless and highly scalable.
+* Better security with token expiry.
+* Suitable for APIs, mobile apps, and cloud services.
+* Supports Single Sign-On (SSO).
+
+### **Conclusion**
+
+**Session cookies** are best suited for traditional web applications, while **token-based authentication** is more secure, scalable, and preferred for modern web applications, REST APIs, mobile applications, and cloud environments.
+
