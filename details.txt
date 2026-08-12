@@ -1,0 +1,37 @@
+2. Add inbound rules
+
+For a basic web server, you might add:
+
+Type	Port	Source
+SSH	22	Your IP address
+HTTP	80	0.0.0.0/0
+HTTPS	443	0.0.0.0/0
+
+Important: For SSH (port 22), avoid 0.0.0.0/0 unless you have a specific reason. Restrict it to your own IP address.
+
+Then click Create security group.
+
+3. Assign it to your EC2 instance
+
+If you're creating a new EC2 instance:
+
+EC2 → Launch instance → Network settings → Security group → Select existing security group → my-web-server-sg
+
+If your EC2 instance already exists:
+
+EC2 → Instances → Select your instance → Actions → Security → Change security groups → Select my-web-server-sg → Add security groups
+
+Simple idea
+Internet
+   |
+   | Port 80
+   ↓
+Security Group
+   |
+   | Allowed
+   ↓
+EC2 Instance
+
+A Security Group is like a virtual firewall for your AWS resources. It controls which incoming and outgoing traffic is allowed.
+
+If you're currently on the AWS console, tell me what screen you are seeing (or send a screenshot) and I'll guide you click-by-click.
